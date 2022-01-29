@@ -8,13 +8,13 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
         <picture>
           <source 
             type="image/avif"
-            srcset={[["", "1x"], ["@2x", "2x"], ["@3x", "3x"]]
+            srcSet={[["", "1x"], ["@2x", "2x"], ["@3x", "3x"]]
               .map(([suffix, size]) => src.replace(".jpg", suffix + ".avif " + size))
               .join(",\n")}
           />
           <source 
             type="image/jpeg"
-            srcset={[["", "1x"], ["@2x", "2x"], ["@3x", "3x"]]
+            srcSet={[["", "1x"], ["@2x", "2x"], ["@3x", "3x"]]
               .map(([suffix, size]) => src.replace(".jpg", suffix + ".jpg " + size))
               .join(",\n")}
           />
